@@ -235,7 +235,7 @@ module M
 
       # Figure out what test framework we're using
       if defined?(Minitest)
-        suites = Minitest::Test.runnable
+        suites = Minitest::Runnable.runnable
       elsif defined?(MiniTest)
         suites = MiniTest::Unit::TestCase.test_suites
       elsif defined?(Test)
