@@ -189,7 +189,9 @@ module M
         test_arguments = ["-n", "/^(#{test_names})$/"]
 
         # directly run the tests from here and exit with the status of the tests passing or failing
-        if defined?(MiniTest)
+        if defined?(Minitest)
+          Minitest.run test_arguments
+        elsif defined?(MiniTest)
           MiniTest::Unit.runner.run test_arguments
         elsif defined?(Test)
           Test::Unit::AutoRunner.run(false, nil, test_arguments)
@@ -232,7 +234,10 @@ module M
       end
 
       # Figure out what test framework we're using
-      if defined?(MiniTest)
+      if defined?(Minitest)
+        suites = []
+        not_supported
+      elsif defined?(MiniTest)
         suites = MiniTest::Unit::TestCase.test_suites
       elsif defined?(Test)
         suites = Test::Unit::TestCase.test_suites
