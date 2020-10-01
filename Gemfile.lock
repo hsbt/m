@@ -18,7 +18,7 @@ GEM
       simplecov (>= 0.7)
       thor
     docile (1.1.1)
-    json (1.8.1)
+    json (2.3.0)
     method_source (0.8.1)
     mime-types (2.0)
     minitest (2.11.4)
