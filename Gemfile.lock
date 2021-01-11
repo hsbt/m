@@ -26,7 +26,7 @@ GEM
     mustache (0.99.4)
     rake (10.0.4)
     rdiscount (1.6.8)
-    redcarpet (2.0.1)
+    redcarpet (3.5.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rocco (0.8.2)
